@@ -3,16 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ПЛАНЕТА КРАСОТЫ | Фестиваль искусства и стиля</title>
-<meta name="description" content="12 октября 2026 · Майкоп. Форум, чемпионат, эксперты beauty-индустрии и программа фестиваля.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Планета красоты">
-<meta property="og:title" content="ПЛАНЕТА КРАСОТЫ | Фестиваль искусства и стиля">
-<meta property="og:description" content="12 октября 2026 · Майкоп. Форум, чемпионат, эксперты beauty-индустрии и программа фестиваля.">
-<meta property="og:url" content="https://julyzawialowa-ship-it.github.io/-/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ПЛАНЕТА КРАСОТЫ | Фестиваль искусства и стиля">
-<meta name="twitter:description" content="12 октября 2026 · Майкоп. Форум, чемпионат, эксперты beauty-индустрии и программа фестиваля.">
+<title>Планета красоты — Фестиваль искусства и стиля</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root { box-sizing: border-box; }
@@ -1278,6 +1269,7 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
 .pb .reglament-btn{ background:linear-gradient(135deg, rgba(216,171,99,0.3), rgba(201,138,130,0.22)) !important; border:1.5px solid rgba(216,171,99,0.8) !important; box-shadow:0 6px 18px rgba(0,0,0,.35); }
 .pb .reglament-btn-label{ font-size:16px !important; font-weight:800 !important; }
 .pb .reglament-btn-sub{ font-size:11px !important; font-weight:800 !important; }
+.pb .reglament-btn.addon-btn .reglament-btn-label{ font-size:18px !important; }
 .pb .reglament-btn-arrow{ background:rgba(216,171,99,0.4) !important; }
 .pb .pay-btn{ background:linear-gradient(135deg, var(--gold-soft), var(--gold)) !important; border-color:transparent !important; }
 .pb .pay-btn .reglament-btn-label{ color:#1c1015 !important; }
@@ -1385,6 +1377,18 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
 .pb .cover-nav-btn.tertiary{
   background:linear-gradient(135deg, #f6e4d8, #e0b9a3) !important;
   color:#2a1710 !important;
+}
+
+/* ===== мерцание на трёх кнопках обложки, чтобы было видно, что кликабельны ===== */
+.pb .cover-nav-btn{ position:relative !important; overflow:hidden !important; isolation:isolate; animation:pbGlowPulse2 2.6s ease-in-out infinite; }
+.pb .cover-nav-btn::after{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.55) 48%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.55) 52%, transparent 65%);
+  background-size:250% 100%;
+  animation:pbShimmerSweep 3s ease-in-out infinite;
+  pointer-events:none;
+  mix-blend-mode:overlay;
 }
 
 </style>
@@ -1608,7 +1612,6 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
         </a>
         <a class="reglament-btn addon-btn" href="#excursion">
           <div class="reglament-btn-text">
-            <div class="reglament-btn-sub">Можно добавить к билету</div>
             <div class="reglament-btn-label">Добавить экскурсию</div>
           </div>
           <div class="reglament-btn-arrow"><svg viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -1651,7 +1654,6 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
         </a>
         <a class="reglament-btn addon-btn" href="#excursion">
           <div class="reglament-btn-text">
-            <div class="reglament-btn-sub">Можно добавить к билету</div>
             <div class="reglament-btn-label">Добавить экскурсию</div>
           </div>
           <div class="reglament-btn-arrow"><svg viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -1695,7 +1697,6 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
         </a>
         <a class="reglament-btn addon-btn" href="#excursion">
           <div class="reglament-btn-text">
-            <div class="reglament-btn-sub">Можно добавить к билету</div>
             <div class="reglament-btn-label">Добавить экскурсию</div>
           </div>
           <div class="reglament-btn-arrow"><svg viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -1725,7 +1726,7 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
         <div class="benefit-title">🏔 ЭКСКУРСИЯ по самым красивым местам республики Адыгеи:</div>
         <ul class="benefit-list">
           <li>Это участки ущелья реки Белая. Гуамское ущелье. Панорамные виды гор Адыгеи</li>
-          <li>вкусный обед в маленьком традиционном ресторанчике на маршруте</li>
+          <li>вкусный обед</li>
         </ul>
       </div>
       <div class="benefit-block">
@@ -1741,14 +1742,14 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
       <div class="price-tag" style="margin-top:8px;">6 000 ₽</div>
       <p class="pkg-tagline">Места ограничены!</p>
       <div class="contact-btn-row">
-        <a class="reglament-btn contact-btn" href="#closing">
+        <a class="reglament-btn contact-btn" href="https://max.ru/u/f9LHodD0cOJHDuUnbjrs-UiMRKsr9mcit5DfOY_0da7u2RCjtb-1OnWLl5U" target="_blank" rel="noopener">
           <div class="reglament-btn-text">
             <div class="reglament-btn-sub">Связаться с организатором</div>
             <div class="reglament-btn-label">Написать в Max</div>
           </div>
           <div class="reglament-btn-arrow"><svg viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </a>
-        <a class="reglament-btn contact-btn" href="#closing">
+        <a class="reglament-btn contact-btn" href="https://t.me/sannikova_anastasiya_studio" target="_blank" rel="noopener">
           <div class="reglament-btn-text">
             <div class="reglament-btn-sub">Связаться с организатором</div>
             <div class="reglament-btn-label">Написать в Telegram</div>
@@ -1810,15 +1811,6 @@ body{margin:0;background:#170f1a;display:flex;justify-content:center;}
       </div>
       <p class="closing-note">По всем вопросам регистрации:<br><span style="white-space:nowrap; display:inline-flex; align-items:center; justify-content:center;">Санникова Анастасия, <svg class="icon-inline" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>918-380-36-91</span></p>
       <p class="pkg-tagline">Участникам чемпионата билет Standard на форум идёт в подарок (бесплатно)!</p>
-      <div class="reglament-list" style="margin-top:18px;">
-        <a class="reglament-btn" href="https://incomparable-dasik-f00c63.netlify.app/" target="_blank" rel="noopener">
-          <div class="reglament-btn-text">
-            <div class="reglament-btn-sub">Для партнёров и спикеров</div>
-            <div class="reglament-btn-label">Коммерческое предложение</div>
-          </div>
-          <div class="reglament-btn-arrow"><svg viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        </a>
-      </div>
     </div>
   </section>
 <section id="closing" class="cosmic-section">
